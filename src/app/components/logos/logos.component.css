@@ -1,0 +1,143 @@
+.row .container{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.row{
+    padding: 10px;
+}
+
+#divLogoArg{
+    display: flex;
+    justify-content: center;
+}
+#logoArg{
+    max-width: 300px;
+    
+    position: relative;
+    bottom: 30%;
+    min-width: 100px;
+}
+#btnIngreso{
+    height: 2em;
+    width: 5em;
+    text-align-last: center;
+    display: flex;
+    align-items: center;
+}
+#logoSocial{
+    position:relative;
+    max-width: 4%;
+    min-width: 30px;
+    border-radius: 10px;
+    right:30%;
+    margin-top:3%;
+    float:right;
+    transition:all .5s ease-in-out;
+}
+
+#logoSocial:hover{
+    filter: blur(2px) sepia(60%);
+}
+
+#divRedes{
+    display: flex;
+    flex-direction:row;
+    justify-content: space-around;
+}
+
+#divIngreso{
+    display:flex;
+    flex-direction: reverse-row;
+    justify-content:  center;
+    position: relative;
+    left:1%;
+}
+
+@media only screen and (min-width: 992px){
+    #divRedes{
+        display: flex;
+        flex-direction:column;
+        justify-content: space-around;
+        position:relative;
+        left:4%;
+    }
+
+    #divIngreso{
+        display:flex;
+        flex-direction: row-reverse;
+        justify-content: end;
+        position: relative;
+        left:-2%;
+    }
+
+    #logoArg{
+        max-width: 300px;
+        display: flex;
+        position: relative;
+        bottom: 18%;
+        min-width: 100px;
+    }
+
+    #divLogoArg{
+        display: flex;
+        justify-content:flex-start;
+    }
+}
+
+@media only screen and (min-width: 1440px){
+    #divRedes{
+        display: flex;
+        flex-direction:column;
+        justify-content: space-around;
+        position:fixed;
+        left:91%;
+
+        
+    }
+
+    #divIngreso{
+        display:flex;
+        flex-direction: row-reverse;
+        justify-content: end;
+        position: relative;
+        left:-2%;
+    }
+
+    #logoArg{
+        max-width: 500px;
+        display: flex;
+        position: relative;
+        bottom: 20%;
+        min-width: 100px;
+    }
+
+    #divLogoArg{
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        position:relative;
+        
+    }
+
+    #btnIngreso{
+        height: 2em;
+        width: 5em;
+        font-size: 25px;
+        justify-content: center;
+        display: flex;
+        align-items: center;
+    }
+
+    #logoSocial{
+        position:relative;
+        max-width: 48px;
+        min-width: 30px;
+        border-radius: 10px;
+        right:30%;
+        margin-top:3%;
+        float:right;
+        transition:all .5s ease-in-out;
+    }
+}

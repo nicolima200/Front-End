@@ -1,0 +1,12 @@
+.row{
+    background-color: deepskyblue;
+    padding:20px;
+}
+
+.row div{
+    text-align: center;
+}
+
+h1{
+    text-align: center;
+}
