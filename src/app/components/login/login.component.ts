@@ -5,6 +5,7 @@ import { LoginUsuario } from 'src/app/model/login-usuario';
 import { AuthService } from 'src/app/service/auth.service';
 import { TokenService } from 'src/app/service/token.service';
 
+
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -32,8 +33,8 @@ export class LoginComponent implements OnInit {
   }
 
   onLogin(): void{
-    this.loginUsuario= new LoginUsuario(this.nombreUsuario, this.password); this.authService
-      .login(this.loginUsuario).subscribe(data => {
+        this.loginUsuario= new LoginUsuario(this.nombreUsuario, this.password); 
+        this.authService.login(this.loginUsuario).subscribe(data => {
         this.isLogged=true;
         this.isLogginFail=false;
         this.tokenService.setToken(data.token);
