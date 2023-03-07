@@ -50,7 +50,7 @@ export class NewEducacionComponent implements OnInit {
     //const filename=e2.target.files[0].name;
     //console.log(filename);
     this.fileName = e2.target.files[0].name;
-    console.log('select', this.fileName);
+    //console.log('select', this.fileName);
     this.archivo = e2.target.files[0];
   }
 
@@ -62,11 +62,11 @@ export class NewEducacionComponent implements OnInit {
 
     uploadBytes(imgRef,file)
       .then(async response=>{
-        console.log(response)
+        //console.log(response)
         this.url=await getDownloadURL(response.metadata.ref);
         this.path=await response.metadata.fullPath
-        console.log('url???', this.url);
-        console.log('path',this.path)
+        //console.log('url???', this.url);
+        //console.log('path',this.path)
         this.onCreate();
       })
       .catch(error=>console.log(error));

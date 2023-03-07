@@ -9,9 +9,9 @@ import { TokenService } from 'src/app/service/token.service';
   styleUrls: ['./acerca-de.component.css']
 })
 export class AcercaDeComponent{
-  persona: Persona= new Persona("","","","","");
+  /*persona: Persona= new Persona("","","","","");
   id:number=28;
-  /*persona: Persona;*/
+  
   isLogged:boolean;
   constructor (public personaService: PersonaService, private tokenService: TokenService){};
 
@@ -26,5 +26,5 @@ export class AcercaDeComponent{
     
     
   }
-
+*/
 }

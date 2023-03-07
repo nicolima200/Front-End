@@ -18,8 +18,8 @@ export class BannerComponent {
   isLogged:boolean;
   constructor(public personaService: PersonaService, private tokenService: TokenService){}
 
-  ngOnInit():void{
-    /*this.cargarPersona();*/
+  /*ngOnInit():void{
+    
     
     if (this.tokenService.getToken()) {
       this.isLogged = true;
@@ -29,7 +29,7 @@ export class BannerComponent {
     
     this.personaService.getOne(27).subscribe(data=> {this.persona=data});
     console.log('type',this.persona);
-  }
+  }*/
 
   /*cargarPersona(): void {
     console.log('list',this.personaService.getPersona(28));
