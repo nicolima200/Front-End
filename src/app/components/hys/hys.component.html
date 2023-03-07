@@ -1,131 +1,60 @@
 <div class="row">
-    <h1>Hard & Soft skills</h1>
-    <div class="col-sm-4 col-md-4 col-lg-4">
+    <h2>Hard & Soft skills</h2>
+    <div><br><br><br></div>
+    <div class="col-lg-2">
+        <button type="button" routerLink="/newSkill" class="btn btn-dark" *ngIf="isLogged">Nueva skill</button>
+    </div>
+    <div id="cajaCirculo">
+        <div class="col-sm-4 col-md-4 col-lg-4 circulo" *ngFor="let skill of skill">
         <circle-progress 
-        [percent]="60"
-        [radius]="100"
-        [outerStrokeWidth]="12"
-        [innerStrokeWidth]="8"
-        [outerStrokeColor]="'red'"
-        [innerStrokeColor]="'#C7E596'"
+        [percent]="(skill.porcentaje)"
+        [radius]="5"
+        [outerStrokeWidth]=".5"
+        [innerStrokeWidth]=".2"
+        [outerStrokeColor]="'deepskyblue'"
+        [innerStrokeColor]="'#005690'"
+        [outerStrokeGradient]="true"
+        [outerStrokeGradientStopColor]="'#005690'"
+        [space]="1"
         [animation]="true"
         [animationDuration]="1500"
         [showTitle]="true"
         [showSubtitle]="false"
         [showUnits]="false"
-        [title]="'HTML'"
-        [titleFontSize]="'2em'"
-        [imageSrc]="'../../../assets/logos/html5Logo.png'"
-        [showImage]="true"
+        [title]="(skill.nombre)"
+        [titleColor]="'antiquewhite'"
+        [titleFontSize]="'0.1em'"
+        [titleFormat]=""
+        [imageSrc]="''"
+        [showImage]="false"
+        [showBackground]="true"
+        [backgroundColor]="'burlywood'"
+        [backgroundGradient]="true"
+        [backgroundGradientStopColor]="'steelblue'"
+        [backgroundPadding]="2"
+        
         [imageHeight]="100"
         [imageWidth]="100"
         [responsive]="true"
         ></circle-progress>
+        <div>
+            <td *ngIf="isLogged">
+                <button class="btn btn-light" routerLink="/editarSkill/{{skill.id}}">
+                    <i class="bi bi-pencil"></i>
+                </button>
+            </td>
+    
+            <td *ngIf="isLogged">
+                <button class="btn btn-danger" (click)="delete(skill.id)">
+                    <i class="bi bi-backspace-fill"></i>
+                </button>
+            </td>
+        </div>
     </div>
-    <div class="col-sm-4 col-md-4 col-lg-4">
-        <circle-progress 
-        [percent]="50"
-        [radius]="100"
-        [outerStrokeWidth]="16"
-        [innerStrokeWidth]="8"
-        [outerStrokeColor]="'red'"
-        [innerStrokeColor]="'#C7E596'"
-        [animation]="true"
-        [animationDuration]="1500"
-        [showTitle]="true"
-        [showSubtitle]="false"
-        [showUnits]="false"
-        [title]="'HTML'"
-        [titleFontSize]="'2em'"
-        [imageSrc]="'../../../assets/logos/javascriptLogo.png'"
-        [showImage]="true"
-        [imageHeight]="115"
-        [imageWidth]="200"
-        [responsive]="true"></circle-progress>
+    
+        
+        
     </div>
-    <div class="col-sm-4 col-md-4 col-lg-4">
-        <circle-progress 
-        [percent]="70"
-        [radius]="100"
-        [outerStrokeWidth]="16"
-        [innerStrokeWidth]="8"
-        [outerStrokeColor]="'red'"
-        [innerStrokeColor]="'#C7E596'"
-        [animation]="true"
-        [animationDuration]="1500"
-        [showTitle]="true"
-        [showSubtitle]="false"
-        [showUnits]="false"
-        [title]="'HTML'"
-        [titleFontSize]="'2em'"
-        [imageSrc]="'../../../assets/logos/html5Logo.png'"
-        [showImage]="true"
-        [imageHeight]="100"
-        [imageWidth]="100"
-        [responsive]="true"></circle-progress>
-    </div>
-    <div class="col-sm-4 col-md-4 col-lg-4">
-        <circle-progress
-        [percent]="40"
-        [radius]="100"
-        [outerStrokeWidth]="16"
-        [innerStrokeWidth]="8"
-        [outerStrokeColor]="'red'"
-        [innerStrokeColor]="'#C7E596'"
-        [animation]="true"
-        [animationDuration]="1500"
-        [showTitle]="true"
-        [showSubtitle]="false"
-        [showUnits]="false"
-        [title]="'HTML'"
-        [titleFontSize]="'2em'"
-        [imageSrc]="'../../../assets/logos/html5Logo.png'"
-        [showImage]="true"
-        [imageHeight]="100"
-        [imageWidth]="100"
-        [responsive]="true"></circle-progress>
-    </div>
-    <div class="col-sm-4 col-md-4 col-lg-4">
-        <circle-progress 
-        [percent]="15"
-        [radius]="100"
-        [outerStrokeWidth]="16"
-        [innerStrokeWidth]="8"
-        [outerStrokeColor]="'red'"
-        [innerStrokeColor]="'#C7E596'"
-        [animation]="true"
-        [animationDuration]="1500"
-        [showTitle]="true"
-        [showSubtitle]="false"
-        [showUnits]="false"
-        [title]="'HTML'"
-        [titleFontSize]="'2em'"
-        [imageSrc]="'../../../assets/logos/html5Logo.png'"
-        [showImage]="true"
-        [imageHeight]="100"
-        [imageWidth]="100"
-        [responsive]="true"></circle-progress>
-    </div>
-    <div class="col-sm-4 col-md-4 col-lg-4">
-        <circle-progress 
-        [percent]="90"
-        [radius]="100"
-        [outerStrokeWidth]="16"
-        [innerStrokeWidth]="8"
-        [outerStrokeColor]="'red'"
-        [innerStrokeColor]="'#C7E596'"
-        [animation]="true"
-        [animationDuration]="1500"
-        [showTitle]="true"
-        [showSubtitle]="false"
-        [showUnits]="false"
-        [title]="'HTML'"
-        [titleFontSize]="'2em'"
-        [imageSrc]="'../../../assets/logos/html5Logo.png'"
-        [showImage]="true"
-        [imageHeight]="100"
-        [imageWidth]="100"
-        [responsive]="true"></circle-progress>
-    </div>
+   
 
 </div>

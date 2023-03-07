@@ -1,33 +1,41 @@
 <div class="row">
-    <h1 align="center">Experiencia Laboral</h1>
+    <h2 align="center">Experiencia Laboral</h2>
     <div class="col-lg-2">
         <button type="button" class="btn btn-dark" routerLink="/nuevaExp" *ngIf="isLogged">
             Nueva experiencia
         </button>
     </div>
 
+    <br>
+    <br>
+    <br>
 
-    <div class="col-lg-1"></div>
-    <div class="col-lg-11">
-        <table class="table">
+    <div >
+        <table class="table table-responsive">
             <tbody>
                 <tr *ngFor="let Experiencia of expe">
                     <td>
-                        <h5>{{Experiencia.nombreE}}</h5>
+                        <img *ngIf="Experiencia.url; else sinImagen" src='{{Experiencia.url}}' class="imgExp" alt="Imagen experiencia" onerror=" this.onerror=null;this.src='../../../assets/logos/error.png'">    
                     </td>
-                    <td>{{Experiencia.descripcionE}}</td>
+                    <ng-template #sinImagen>
+                        <img src="../../../assets/logos/error.png" alt="Imagen experiencia" class="imgExp">
+                    </ng-template>
+                    <td>
+                        <h4 style="color:antiquewhite">{{Experiencia.nombreE}}</h4>
+                    </td>
+                    <td>
+                        <h5>{{Experiencia.descripcionE}}</h5>
+                    </td>
                     <td *ngIf="isLogged"><button class="btn btn-light" routerLink="/editarExp/{{Experiencia.id}}">
 
                             <i class="bi bi-pencil"></i>Editar</button></td>
                     <td *ngIf="isLogged"><button class="btn btn-danger" (click)="delete(Experiencia.id)">
-
-                            Borrar<i class="bi bi-backspace-fill"></i></button>
+                        Borrar
+                        <i class="bi bi-backspace-fill"></i></button>
                     </td>
                 </tr>
-
             </tbody>
 
         </table>
     </div>
-
 </div>

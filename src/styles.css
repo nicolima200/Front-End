@@ -1,1 +1,62 @@
 /* You can add global styles to this file, and also import other style files */
+#fondo{
+  box-shadow: inset 0px 0px 46px 13px #005690;
+    background-color:steelblue;
+    
+}
+
+h1,h5,td,p{
+    color:azure;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+h3{
+  color:antiquewhite;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+h2{
+  box-shadow: inset -10px -16px 18px 0px steelblue;
+  border-radius: 7px;
+  color: white;
+  background-color: #0dcaf0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-shadow: 2px 3px 5px #131a20;
+}
+
+table{
+    box-shadow: 0px 0px 11px 2px #005690;
+    box-shadow: 0px 0px 6px 2px ;
+  background-color: steelblue;
+  border-radius: 8px;
+  width:100%;
+  padding: 0.5rem;
+  border-bottom-width: 0px;
+  
+  
+}
+tr{
+  vertical-align:initial;
+  
+}
+
+*{
+    padding:0;
+    margin:0;
+}
+
+div.row{
+    margin-right: 0px;
+    /*margin: 0px!important;*/
+  }
+  
+  
+  
+  div.container-fluid{
+    padding-right: 0px;
+    margin-right: 0px;
+  }
+  
+  div.container{
+    padding-right: 0px;
+    margin-right: 0px;
+  }

@@ -2,6 +2,13 @@
     padding: 20px;
 }
 
-div{
-    background-color: deepskyblue;
+td{
+    max-width: 35em;
+    overflow-wrap: break-word;
+    
+}
+
+.imgEdu{
+    max-width: 120px;
+    max-height: 80px;
 }

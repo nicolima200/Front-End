@@ -1,0 +1,67 @@
+<div class="container">
+    <div class="row">
+        <div>
+            <br><br>
+            <form (ngSubmit)="uploadImage()" novalidate #f="ngForm">
+                <div class="col-8 form-group">
+                    <label for="nombre" class="label"><h2>Nombre</h2></label>
+                    <br>
+                    <br>
+                    <input type="text" class="form-control" name="nombre" [(ngModel)]="nombre" required >  
+                </div>
+                <div class="col-8 form-group">
+                    <label for="apellido" class="label"><h2>Apellido</h2></label>
+                    <br>
+                    <br>
+                    <input type="text" class="form-control" name="apellido" [(ngModel)]="apellido" required >  
+                </div>
+                <div class="col-8 form-group">
+                    <label for="titulo" class="label"><h2>Titulo</h2></label>
+                    <br>
+                    <br>
+                    <input type="text" class="form-control" name="titulo" [(ngModel)]="titulo" required >  
+                </div>
+
+                <br><br><br>
+
+                <div class="col-8 form-group">
+                    <label for="acercaDe" class="label"><h2>Acerca de</h2></label>
+                    <br>
+                    <br>
+                    <input type="text" class="form-control" id="acercaDe" name="acercaDe" [(ngModel)]="acercaDe" required>
+                </div>
+
+                <br><br><br>
+                
+                <div class="form-group">
+                    <h5>Seleccionar imagen</h5>
+                    <input type="file" accept=".png, .jpg, .jpeg" style="color:azure" (change)="onSelect($event)">
+                    
+
+                </div>
+                <input type="text" [value]="fileName" hidden="true">
+                
+                <br>
+                <br>
+                <br>
+                
+                <button *ngIf="nombre && acercaDe ; else btnDisabled" type="submit" class="btn btn-primary" (submit)="uploadImage()">
+                    <h4>Agregar Persona</h4>
+                    
+                </button>
+
+                <!--<button *ngIf="fileName !== undefined && nombreE && descripcionE ; else btnDisabled" type="submit" class="btn btn-primary" (submit)="uploadImage()">
+                    <h4>Agregar Educación</h4>
+                    
+                </button>-->
+            
+                <ng-template #btnDisabled>
+                    <button  type="submit" disabled="true" class="btn btn-secondary" >
+                        <h4>Agregar Educación</h4>                        
+                    </button>    
+                </ng-template>
+
+            </form>
+        </div>
+    </div>
+</div>

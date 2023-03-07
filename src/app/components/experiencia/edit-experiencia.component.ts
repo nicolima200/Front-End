@@ -9,6 +9,14 @@ import { SExperienciaService } from 'src/app/service/s-experiencia.service';
   styleUrls: ['./edit-experiencia.component.css']
 })
 export class EditExperienciaComponent implements OnInit {
+  expLab: Experiencia=null;
+
+  constructor(
+  private sExperiencia: SExperienciaService, 
+  private activatedRouter: ActivatedRoute,
+  private router: Router)
+  {}
+
   ngOnInit(): void {
     const id=this.activatedRouter.snapshot.params['id'];
     this.sExperiencia.detail(id).subscribe(
@@ -21,11 +29,7 @@ export class EditExperienciaComponent implements OnInit {
       }
     )
   }
-  expLab: Experiencia=null;
-
-  constructor(private sExperiencia: SExperienciaService, private activatedRouter: ActivatedRoute,
-  private router: Router){}
-
+  
   onUpdate():void{
     const id= this.activatedRouter.snapshot.params['id'];
     this.sExperiencia.update(id, this.expLab).subscribe(

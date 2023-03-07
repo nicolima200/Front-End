@@ -1,13 +1,17 @@
 .row{
     padding: 20px;
-    background-color: deepskyblue;
+    
 }
-
+#tdImg{
+    display: flex;
+    justify-content: center;
+}
 #img{
-    box-shadow: 3px 3px 10px;
+    
+    box-shadow: 3px 3px 10px #014370;
     transition:all .5s ease-in-out;
     border-radius: 10px;
-    ;
+    max-width: 70%;
 }
 
 #img:hover{    
@@ -18,3 +22,9 @@
     text-align: justify;
 }
 
+.descripcion{
+    color:black;
+}
+h2{
+    text-align: center;
+}

@@ -1,0 +1,198 @@
+/*.row .container{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}*/
+#containerLOGOS{
+        
+    display: flex;
+    padding-right: 0px;
+    margin-right: 0px;
+    justify-content: space-between;
+
+}
+#divLogoArg{
+    display: flex;
+    flex-direction: row;
+    justify-content:center;
+}
+#logoArg{
+    width: 60%;
+    position: relative;
+    padding: 3%;
+    
+}
+#divLog{
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    
+}
+
+#btnLogin{
+    position:relative;
+    width:20px;
+    min-width:5px;
+    margin-top: 20px;
+    transition:all .5s ease-in-out;
+    -webkit-filter: invert(100%);
+    filter: invert(100%);
+}
+
+
+#btnLogout{
+    position:relative;
+    max-width: 2em;
+    transition:all .5s ease-in-out;
+    -webkit-filter: invert(100%);
+    filter: invert(100%);
+}
+
+#btnLogin:hover{
+    opacity: 100%;
+    border-radius:50%;
+    -webkit-border-radius:50%;
+    box-shadow: 0px 0px 15px 15px #ec731e;
+    -webkit-box-shadow: 0px 0px 15px 15px #ec731e;
+    transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    
+    max-width: 2rem;
+}
+#btnLogout:hover{
+    opacity: 100%;
+    border-radius:50%;
+    -webkit-border-radius:50%;
+    box-shadow: 0px 0px 15px 15px #ec731e;
+    -webkit-box-shadow: 0px 0px 15px 15px #ec731e;
+    transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    
+    max-width: 2rem;
+}
+.logoSocial{
+    position:relative;
+    max-width: 4%;
+    min-width: 25px;
+    border-radius: 10%;
+    margin-bottom:5px;
+    float:right;
+    transition:all .5s ease-in-out;
+    -webkit-filter: invert(100%);
+    filter: invert(100%);
+}
+
+.logoSocial:hover{
+    border-radius:50%;
+    -webkit-border-radius:50%;
+    box-shadow: 0px 0px 15px 15px #ec731e;
+    -webkit-box-shadow: 0px 0px 15px 15px #ec731e;
+    transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    opacity: 90%;
+    max-width: 2rem;
+}
+
+#divRedes{
+    display: flex;
+    flex-direction:row;
+    justify-content: space-around;
+    padding: 2%;
+}
+
+
+
+/*(min-width: 768px)*/
+@media only screen and (min-width: 768px){
+    /*#contenedorRedes{
+        display: flex;
+        flex-direction:row;
+        justify-content: end;
+        margin-bottom: 16%;
+    }*/
+    #containerLOGOS{
+        
+            display: flex;
+            padding-right: 0px;
+            margin-right: 0px;
+            justify-content: space-between;
+        
+    }
+
+    #contenedorRedes{
+    display: grid;
+    /*margin-bottom: 16%;*/
+    align-items: center;
+    }
+
+    #divRedes{
+        display: flex;
+        flex-direction:column;
+        justify-content:space-around;
+        position:fixed;
+        max-width: 1%;
+        
+    }
+
+    #logoArg{
+        width: 300px;
+        height: 120px;
+        position:relative;
+        bottom: 18%;
+        
+        
+    }
+
+    #divLogoArg{
+        display:grid;
+        justify-content: start;
+    }
+    #divLog{
+        display:flex;
+        flex-direction: row;
+        justify-content: end;
+        padding-top: 3%;
+        
+    }
+    #btnLogin{        
+        position:relative;
+        max-width: 1rem;
+        min-width: 25px;
+        margin-top:2%;
+        transition:all .5s ease-in-out;
+        -webkit-filter: invert(100%);
+        filter: invert(100%);
+    }
+    
+    #btnLogout{
+        position:relative;
+        min-width: 30px;
+        max-width: 2rem;
+        margin-top:3%;
+        transition:all .5s ease-in-out;
+        -webkit-filter: invert(100%);
+        filter: invert(100%);
+    }
+    
+
+    .logoSocial{
+        min-width: 20px;
+        
+        -webkit-filter: invert(100%);
+        filter: invert(100%);
+        opacity: 40%;
+        float: right;
+    }
+}
+
+/*(min-width: 1200px)*/
+@media only screen and (min-width: 1200px){
+    #logoArg{
+        width: 550px;
+        height: 200px;
+    }
+
+    .logoSocial{
+        min-width: 30px;
+    }
+}

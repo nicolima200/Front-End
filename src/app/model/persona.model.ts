@@ -1,12 +1,16 @@
-export class persona{
+export class Persona{
     id?:number;
     nombre: string;
     apellido: string;
-    img: string;
+    url: string;
+    acercaDe:string;
+    titulo:string;
 
-    constructor(nombre: string, apellido: string, img: string){
+    constructor(nombre: string, apellido: string,titulo:string, acercaDe:string, url: string){
         this.nombre=nombre;
         this.apellido=apellido;
-        this.img=img;
+        this.url=url;
+        this.acercaDe=acercaDe;
+        this.titulo=titulo;
     }
 }

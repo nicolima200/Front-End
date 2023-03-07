@@ -1,21 +1,46 @@
 <div class="row">
-    <h1 align="center">Educación</h1>
-    <div class="col-lg-11">
-        <ul>
-            <li>
-                <h2>Estudio 1</h2> - <h3>- años</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero obcaecati expedita cum, quos omnis aliquam dolorum. Et, facere. Maiores dolor et possimus deleniti minima sint illum, placeat nihil incidunt labore.</p>
-            </li>
+    <h2 align="center">Educación</h2>
+    <div class="col-lg-2">
+        <button type="button" class="btn btn-dark" routerLink="/nuevaEdu" *ngIf="isLogged">
+            Agregar educación
+        </button>
+    </div>
 
-            <li>
-                <h2>Estudio 2</h2> - <h3>- años</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero obcaecati expedita cum, quos omnis aliquam dolorum. Et, facere. Maiores dolor et possimus deleniti minima sint illum, placeat nihil incidunt labore.</p>
-            </li>
+    <br>
+    <br>
+    <br>
+    
+    <div>
+        <table class="table table-responsive">
+            <tbody>
+                <tr *ngFor="let Educacion of educacion">
+                    <td>
+                        <img *ngIf="Educacion.url; else sinImagen" src='{{Educacion.url}}' class="imgEdu" alt="Imagen educación" onerror=" this.onerror=null;this.src='../../../assets/logos/error.png'">    
+                    </td>
+                    <ng-template #sinImagen>
+                        <img src="../../../assets/logos/error.png" alt="Imagen educación" class="imgEdu">
+                    </ng-template>
+                    <td>
+                        <h4 style="color:antiquewhite">{{Educacion.nombreE}}</h4>
+                    </td>
+                    <td>
+                        <h5>{{Educacion.descripcionE}}</h5>
+                    </td>
+                    <!--<td>{{Educacion.id}}</td>
+                        <td><input type="text" value={{Educacion.path}} #pathInput></td>
+                    -->
+                    <td *ngIf="isLogged"><button class="btn btn-light" routerLink="/editarEdu/{{Educacion.id}}">
 
-            <li>
-                <h2>Estudio 3</h2> - <h3>- años</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero obcaecati expedita cum, quos omnis aliquam dolorum. Et, facere. Maiores dolor et possimus deleniti minima sint illum, placeat nihil incidunt labore.</p>
-            </li>
-        </ul>
+                            <i class="bi bi-pencil"></i>Editar</button></td>
+
+                    <td *ngIf="isLogged">
+                        <button class="btn btn-danger" (click)="delete(Educacion.id)" >
+                            Borrar
+                            <i class="bi bi-backspace-fill"></i></button>
+                    </td>
+
+                </tr>
+            </tbody>
+        </table>
     </div>
 </div>

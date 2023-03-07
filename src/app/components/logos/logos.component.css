@@ -1,143 +1,208 @@
-.row .container{
+/*.row .container{
     display:flex;
     justify-content: space-between;
     align-items: center;
-}
+}*/
 
-.row{
-    padding: 10px;
-}
-
-#divLogoArg{
+#divLogoArg {
     display: flex;
+    flex-direction: row;
     justify-content: center;
+    -webkit-filter: invert(100%);
+    filter: invert(100%);
 }
-#logoArg{
-    max-width: 300px;
-    
+
+#logoArg {
+    width: 60%;
     position: relative;
-    bottom: 30%;
-    min-width: 100px;
+    padding: 3%;
+    filter:invert(100);
+
 }
-#btnIngreso{
-    height: 2em;
-    width: 5em;
-    text-align-last: center;
+
+#divLog {
     display: flex;
-    align-items: center;
+    flex-direction: row;
+    justify-content: end;
+
 }
-#logoSocial{
-    position:relative;
+
+#btnLogin {
+    position: relative;
+    width: 30px;
+
+    min-width: 25px;
+    margin-top: 20px;
+    transition: all .5s ease-in-out;
+    /*-webkit-filter: invert(100%);*/
+    /*filter: invert(100%);*/
+    margin-right: 1em;
+}
+
+
+#btnLogout {
+    position: relative;
+    width: 25px;
+    max-width: 3em;
+    transition: all .5s ease-in-out;
+    /*-webkit-filter: invert(100%);*/
+    /*filter: invert(100%);*/
+    margin-right: 1em;
+    margin-top: 1em;
+}
+
+#btnLogin:hover {
+    opacity: 100%;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    box-shadow: 0px 0px 15px 15px #ec731e;
+    -webkit-box-shadow: 0px 0px 15px 15px #ec731e;
+    transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+
+    max-width: 2rem;
+}
+
+#btnLogout:hover {
+    opacity: 100%;
+    /*border-radius:50%;*/
+    /*-webkit-border-radius:50%;*/
+    box-shadow: 0px 0px 15px 15px #ec731e;
+    -webkit-box-shadow: 0px 0px 15px 15px #ec731e;
+    transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+
+    max-width: 2rem;
+}
+
+.logoSocial {
+    position: relative;
     max-width: 4%;
-    min-width: 30px;
-    border-radius: 10px;
-    right:30%;
-    margin-top:3%;
-    float:right;
-    transition:all .5s ease-in-out;
+    min-width: 25px;
+    border-radius: 10%;
+    margin-bottom: 5px;
+    float: right;
+    transition: all .5s ease-in-out;
+    /*-webkit-filter: invert(100%);
+    filter: invert(100%);*/
 }
 
-#logoSocial:hover{
-    filter: blur(2px) sepia(60%);
+.logoSocial:hover {
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    box-shadow: 0px 0px 15px 15px #ec731e;
+    -webkit-box-shadow: 0px 0px 30px 8px #ec731e;
+    transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    opacity: 90%;
+    max-width: 2rem;
 }
 
-#divRedes{
+#divRedes {
     display: flex;
-    flex-direction:row;
+    flex-direction: row;
     justify-content: space-around;
+    padding: 2%;
 }
 
-#divIngreso{
-    display:flex;
-    flex-direction: reverse-row;
-    justify-content:  center;
-    position: relative;
-    left:1%;
-}
 
-@media only screen and (min-width: 992px){
-    #divRedes{
+
+/*(min-width: 768px)*/
+@media only screen and (min-width: 768px) {
+
+    /*#contenedorRedes{
         display: flex;
-        flex-direction:column;
-        justify-content: space-around;
-        position:relative;
-        left:4%;
-    }
-
-    #divIngreso{
-        display:flex;
-        flex-direction: row-reverse;
+        flex-direction:row;
         justify-content: end;
-        position: relative;
-        left:-2%;
+        margin-bottom: 16%;
+    }*/
+    #containerLOGOS {
+
+        display: flex;
+        padding-right: 0px;
+        margin-right: 0px;
+        justify-content: space-between;
+
     }
 
-    #logoArg{
-        max-width: 300px;
+    #contenedorRedes {
+        display: grid;
+        /*margin-bottom: 16%;*/
+        align-items: center;
+        justify-items: end;
+    }
+
+    #divRedes {
         display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        position: fixed;
+        max-width: 1%;
+
+    }
+
+    #logoArg {
+        width: 300px;
+        height: 120px;
         position: relative;
         bottom: 18%;
-        min-width: 100px;
+
+
     }
 
-    #divLogoArg{
+    #divLogoArg {
+        display: grid;
+        justify-content: start;
+    }
+
+    #divLog {
         display: flex;
-        justify-content:flex-start;
+        flex-direction: row;
+        justify-content: end;
+        padding-top: 3%;
+        padding-bottom: 3%;
+
+    }
+
+    #btnLogin {
+        position: relative;
+        max-width: 1rem;
+        min-width: 40px;
+        margin-top: 2%;
+        transition: all .5s ease-in-out;
+        /*-webkit-filter: invert(100%);
+        filter: invert(100%);*/
+    }
+
+    #btnLogout {
+        position: relative;
+        min-width: 30px;
+        max-width: 2rem;
+        margin-top: 3%;
+        transition: all .5s ease-in-out;
+        /*-webkit-filter: invert(100%);
+        filter: invert(100%);*/
+    }
+
+
+    .logoSocial {
+        min-width: 20px;
+
+        /*-webkit-filter: invert(100%);
+        filter: invert(100%);*/
+        opacity: 40%;
+        float: right;
     }
 }
 
-@media only screen and (min-width: 1440px){
-    #divRedes{
-        display: flex;
-        flex-direction:column;
-        justify-content: space-around;
-        position:fixed;
-        left:91%;
-
-        
+/*(min-width: 1200px)*/
+@media only screen and (min-width: 1200px) {
+    #logoArg {
+        width: 550px;
+        height: 200px;
     }
 
-    #divIngreso{
-        display:flex;
-        flex-direction: row-reverse;
-        justify-content: end;
-        position: relative;
-        left:-2%;
-    }
-
-    #logoArg{
-        max-width: 500px;
-        display: flex;
-        position: relative;
-        bottom: 20%;
-        min-width: 100px;
-    }
-
-    #divLogoArg{
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-start;
-        position:relative;
-        
-    }
-
-    #btnIngreso{
-        height: 2em;
-        width: 5em;
-        font-size: 25px;
-        justify-content: center;
-        display: flex;
-        align-items: center;
-    }
-
-    #logoSocial{
-        position:relative;
-        max-width: 48px;
+    .logoSocial {
         min-width: 30px;
-        border-radius: 10px;
-        right:30%;
-        margin-top:3%;
-        float:right;
-        transition:all .5s ease-in-out;
     }
 }

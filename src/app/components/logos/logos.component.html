@@ -1,26 +1,58 @@
-<div class="row">
-    <div class="box" id="divIngreso">
-        <!--<div class="row col-12 col-lg-10 col-xl-10"></div>-->
-        <button type="button" class="btn btn-outline-light" id="btnIngreso" (click)="login()" *ngIf="!isLogged">INGRESO</button>
-        <button type="button" class="btn btn-outline-light" id="btnIngreso" (click)="onLogOut()" *ngIf="isLogged">CERRAR SESIÓN</button>
-        
-    </div>
-</div>
 <div class="container">
-    <div class="row">
-        <div class="box col-12 col-lg-11 col-xl-11" id="divLogoArg">
-            <img src="../../../assets/logos/argentinaprograma.png" id="logoArg" class="img-fluid">    
-        </div>
-    
-        <div class="box col-12 col-lg-1  col-xl-1" id="divRedes">
-            <a href="http://www.facebook.com"><img src="../../../assets/logos/facebook.png" id="logoSocial"></a>
-            <a href="http://www.instagram.com"><img src="../../../assets/logos/instagram.png" id="logoSocial"></a>
-            <a href="http://www.linkedin.com"><img src="../../../assets/logos/linkedin.png" id="logoSocial"></a>
-            <a href="http://www.github.com"><img src="../../../assets/logos/github.png" id="logoSocial"></a>
-            <a href="http://www.twitter.com"><img src="../../../assets/logos/twitter.png" id="logoSocial"></a>
-            
+    <div class="box " id="divLog">
+        <div class="box ">
+            <input type="image" width="25px " src="../../../assets/logos/login.png" id="btnLogin" (click)="login()"
+                *ngIf="!isLogged" />
+            <input type="image" width="40px" src="../../../assets/logos/logout.png" id="btnLogout" (click)="onLogOut()"
+                *ngIf="isLogged" />
+            <!--<button type="button" class="btn btn-outline" id="btnLogIn" (click)="login()" *ngIf="!isLogged"></button>
+                <button type="button" class="btn btn-outline-light" id="logoSocial" (click)="onLogOut()" *ngIf="isLogged">CERRAR SESIÓN</button>-->
+            <!--<a href="login()"><img src="../../../assets/logos/login.png" id="logoSocial" *ngIf="!isLogged"></a>
+                <a href="onLogOut()"><img src="../../../assets/logos/logout.png" id="logoSocial" *ngIf="isLogged"></a>-->
         </div>
     </div>
 </div>
 
 
+<div class="box" id="containerLOGOS">
+    <div class="box col-sm-12 col-md-10" id="divLogoArg">
+        <img src="../../../assets/logos/argentinaprograma.png" id="logoArg" class="img-fluid">
+    </div>
+    
+    <div class="box col-sm-12 col-md-2" id="contenedorRedes">
+
+        <div id="divRedes">
+            <form>
+                <input type="image" src="../../../assets/logos/facebook.png" class="logoSocial"
+                    onclick="window.location.href='https://www.facebook.com/profile.php?id=100010271646498';" />
+            </form>
+            <form>
+                <input type="image" src="../../../assets/logos/instagram.png" class="logoSocial"
+                    onclick="window.location.href='https://www.instagram.com/nicolaspabloolima/';" />
+            </form>
+            <form>
+                <input type="image" src="../../../assets/logos/linkedin.png" class="logoSocial"
+                    onclick="window.location.href='https://www.linkedin.com/in/nicol%C3%A1s-pablo-olima-46b23a269/';" />
+            </form>
+            <form>
+                <input type="image" src="../../../assets/logos/github.png" class="logoSocial"
+                    onclick="window.location.href='https://github.com/nicolima200';" />
+            </form>
+            <form>
+                <input type="image" src="../../../assets/logos/twitter.png" class="logoSocial"
+                    onclick="window.location.href='https://twitter.com/NicolsOlima2';" />
+            </form>
+
+            <!--<a href="https://www.facebook.com/profile.php?id=100010271646498"><img
+                            src="../../../assets/logos/facebook.png" class="logoSocial"></a>
+                    <a href="http://www.instagram.com"><img src="../../../assets/logos/instagram.png"
+                            class="logoSocial"></a>
+                    <a href="http://www.linkedin.com"><img src="../../../assets/logos/linkedin.png" class="logoSocial"></a>
+                    <a href="https://github.com/nicolima200"><img src="../../../assets/logos/github.png"
+                            class="logoSocial"></a>
+                    <a href="http://www.twitter.com"><img src="../../../assets/logos/twitter.png" class="logoSocial"></a>-->
+        </div>
+
+
+    </div>
+</div>

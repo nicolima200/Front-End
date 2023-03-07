@@ -1,10 +1,57 @@
-.row{
-    display:flex;
-    flex-direction: row;
-justify-content: center;}
 
-img{
-    width:100%;
-    margin-left: 4em;
-    margin-right: 1em;
+
+#banner{
+    background-image: url("../../../assets/logos/bandera.jfif");
+    background-repeat: no-repeat;
+    background-position:center;
+    background-size:cover;
+    padding-bottom: 10%;
+    box-shadow:inset;
+    -webkit-box-shadow: inset 0px -4px 53px 38px steelblue;
+    
+}
+
+#fotoPerfil{
+    /*box-shadow: 3px 3px 10px black;*/
+    border-radius: 50%;
+    position:relative;
+    top:90%;
+    
+    width:30%;
+    
+    
+    
+}
+
+#cajaFoto{
+    flex:content;
+    flex-direction: row;
+    justify-content: center;
+    
+    
+}
+
+/******************min 575px**********************/
+@media only screen and (min-width: 575px){
+    #fotoPerfil{
+        position: relative;
+        top:105%;
+        left:8%;
+        width:17%;
+        min-width: 115px;
+    }
+
+    #cajaFoto{
+        flex:content;
+        flex-direction: row;
+        justify-content: start;
+        
+    }
+
+   /* #cajaNombre{
+        /*margin-top: 2em;
+        display:flex;
+        align-items:center;
+        padding: 2em;
+    }*/
 }
